@@ -34,6 +34,6 @@ In conclusion, Java annotations are a versatile feature that adds a layer of met
 
 Understanding the basics of annotations, their retention policies, and how to access them through reflection provides a solid foundation. Moreover, exploring meta-annotations, annotation processors, and advanced topics such as repeating annotations, conditional annotations, and annotation inheritance takes your annotation capabilities to the next level, enabling more sophisticated use cases.
 
-As you continue to explore and leverage Java annotations, you’ll find that they play a crucial role in enhancing the readability, maintainability, and extensibility of your codebase. So, embrace the power of annotations and use them judiciously to make your Java projects more robust and expressive. Happy coding!
+As you continue to explore and leverage Java annotations, you’ll find that they play a crucial role in enhancing the readability, maintainability, and extensibility of your codebase. So, embrace the power of annotations and use them judiciously to make your Java projects more robust and expressive.
 
-Java
+Happy coding!
