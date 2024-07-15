@@ -3,12 +3,16 @@
  */
 package org.example;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import org.example.annotations.VeryImportant;
+import org.example.classes.User;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        User user1 = new User("soufiane" , 22);
+        if (user1.getClass().isAnnotationPresent(VeryImportant.class)){
+            System.out.println("Very Important");
+        }else {
+            System.out.println("Not Important");
+        }
     }
 }
