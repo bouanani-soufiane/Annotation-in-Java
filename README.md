@@ -3,7 +3,7 @@
 
 ![java annotation diagram](images/JavaAnnotations.jpg)
 
-##  <i> There are broadly 5 categories of annotations as listed: </a>
+##  <i> There are broadly 5 categories of annotations as listed: </i>
 
 * Single value Annotations
 * Marker Annotations
@@ -11,7 +11,7 @@
 * Type Annotations
 * Repeating Annotations
 
-##  <i>  Predefined/ Standard Annotations </a>
+##  <i>  Predefined/ Standard Annotations </i>
 
 Java popularly defines seven built-in annotations 
 
