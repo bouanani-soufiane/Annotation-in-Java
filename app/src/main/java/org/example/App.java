@@ -39,6 +39,7 @@ public class App {
 
         for(Field field : MyCat.getClass().getDeclaredFields()){
             if(field.isAnnotationPresent(ImportantString.class)){
+
                 System.out.println(field.getName().toUpperCase());
             }
         }
