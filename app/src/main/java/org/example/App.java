@@ -3,12 +3,14 @@
  */
 package org.example;
 
+import org.example.annotations.ImportantString;
 import org.example.annotations.RunImmediately;
 import org.example.annotations.VeryImportant;
 import org.example.classes.Cat;
 import org.example.classes.User;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -25,14 +27,20 @@ public class App {
         }
 
         Method name[] = MyCat.getClass().getDeclaredMethods();
-        for (Method method : name) {
-            if (method.isAnnotationPresent(RunImmediately.class)){
-                int annotation = method.getAnnotation(RunImmediately.class).times();
-                for(int i = 0 ; i < annotation ; i++){
-                    method.invoke(MyCat);
-                }
-            }
+//        for (Method method : name) {
+//            if (method.isAnnotationPresent(RunImmediately.class)){
+//                int annotation = method.getAnnotation(RunImmediately.class).times();
+//                for(int i = 0 ; i < annotation ; i++){
+//                    method.invoke(MyCat);
+//                }
+//            }
+//
+//        }
 
+        for(Field field : MyCat.getClass().getDeclaredFields()){
+            if(field.isAnnotationPresent(ImportantString.class)){
+                System.out.println(field.getName().toUpperCase());
+            }
         }
     }
 }

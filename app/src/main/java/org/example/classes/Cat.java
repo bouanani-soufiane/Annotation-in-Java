@@ -1,9 +1,12 @@
 package org.example.classes;
 
+import org.example.annotations.ImportantString;
 import org.example.annotations.RunImmediately;
 
 public class Cat {
+
     String name;
+    @ImportantString
     int age;
     public Cat(String name) {
         this.name = name;
