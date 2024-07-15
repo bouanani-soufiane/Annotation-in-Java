@@ -8,10 +8,13 @@ import org.example.annotations.VeryImportant;
 import org.example.classes.Cat;
 import org.example.classes.User;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class App {
-    public static void main(String[] args) {
+
+    public static void main( String[] args) throws InvocationTargetException, IllegalAccessException {
         User user1 = new User("soufiane" , 22);
         Cat MyCat = new Cat("myCat");
 
@@ -23,7 +26,12 @@ public class App {
 
         Method name[] = MyCat.getClass().getDeclaredMethods();
         for (Method method : name) {
-                System.out.println(method + "/");
+            if (method.isAnnotationPresent(RunImmediately.class)){
+                int annotation = method.getAnnotation(RunImmediately.class).times();
+                for(int i = 0 ; i < annotation ; i++){
+                    method.invoke(MyCat);
+                }
+            }
 
         }
     }

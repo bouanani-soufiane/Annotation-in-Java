@@ -8,7 +8,8 @@ public class Cat {
     public Cat(String name) {
         this.name = name;
     }
-    @RunImmediately
+    @RunImmediately (times = 3)
     public void meow(){System.out.println("meow");}
+    @RunImmediately
     public void eat(){System.out.println("yummy");}
 }
