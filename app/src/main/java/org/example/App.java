@@ -3,16 +3,28 @@
  */
 package org.example;
 
+import org.example.annotations.RunImmediately;
 import org.example.annotations.VeryImportant;
+import org.example.classes.Cat;
 import org.example.classes.User;
+
+import java.lang.reflect.Method;
 
 public class App {
     public static void main(String[] args) {
         User user1 = new User("soufiane" , 22);
+        Cat MyCat = new Cat("myCat");
+
         if (user1.getClass().isAnnotationPresent(VeryImportant.class)){
             System.out.println("Very Important");
         }else {
             System.out.println("Not Important");
+        }
+
+        Method name[] = MyCat.getClass().getDeclaredMethods();
+        for (Method method : name) {
+                System.out.println(method + "/");
+
         }
     }
 }
